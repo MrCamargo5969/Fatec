@@ -1,20 +1,13 @@
 a = int(input("Idade do nadador -> "))
-
-v = range(5,8)
-w = range(8,12)
-x = range(12,14)
-y = range(14,17)
-z = range(17, 60)
-
-if a in v:
+if 5 <= a <=7:
     print('Infantil A')
-elif a in w:
+elif 8 <= a <=11:
     print('Infantil B')
-elif a in x:
+elif 12 <= a <=13:
     print('Juvenil A')
-elif a in y:
+elif 14 <= a <=17:
     print('Juvenil B')
-elif a in z:
+elif a > 18:
     print('Adultos')
 else:
     print('Não pode competir')

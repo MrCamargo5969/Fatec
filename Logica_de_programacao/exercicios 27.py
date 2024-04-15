@@ -1,9 +1,9 @@
-for i in range(1, 11):
-    if i == 4:
-        break
-    print('{}'.format(i))
-
-for i in range(1, 11):
-    if i == 4:
+total = 0
+while True:
+    x = int(input('Digite um numero:\n-> '))
+    if x != 0:
+        total += x
         continue
-    print('{}'.format(i))
+    else:
+        print(total)
+        break

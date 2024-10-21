@@ -33,9 +33,9 @@ public class Rectangulo {
         return (2*base) + (2*altura);
     }
     public void exibeArea(){
-        System.out.println("Área do retângulo: " + area());
+        System.out.println("Área: " + area());
     }
     public void exibePerimetro(){
-        System.out.println("Perimetro do retângulo: " + perimetro());
+        System.out.println("Perimetro: " + perimetro());
     }
 }

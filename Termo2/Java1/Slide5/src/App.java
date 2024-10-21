@@ -1,0 +1,12 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+        int base = 5, altura = 5;
+        
+        Rectangulo rec1 = new Rectangulo(5, 6);
+
+        System.out.println("Base do retângulo: " + rec1.base());
+        System.out.println("Altura do retângulo: " + rec1.altura());
+        rec1.exibeArea();
+        rec1.exibePerimetro();
+    }
+}

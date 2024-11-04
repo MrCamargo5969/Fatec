@@ -4,6 +4,12 @@ public class App {
         Count client = new Count();
         client.constructor();
         while (true){
+            Scanner scanner = new Scanner(System.in);
+            System.out.printf("\nDigite a senha para continuar:\n");
+            String pass = scanner.nextLine();
+            if (client.verify(pass)) {break;}
+        }
+        while (true){
             System.out.println();
             System.out.printf("CONTA CORRENTE\n1 - Depósito\n2 - Retirada\n3 - Consulta Saldo\n4 - Sair\nOpção: ");
             Scanner scanner = new Scanner(System.in);

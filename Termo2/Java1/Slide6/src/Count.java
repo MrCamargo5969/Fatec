@@ -4,6 +4,7 @@ public class Count {
     private String name;
     private int number;
     private float balance;
+    private Card card = new Card();
 
     public void constructor(){
         while (true){
@@ -13,6 +14,7 @@ public class Count {
         number = scanner.nextInt();
         System.out.printf("Digite o Saldo:\n");
         balance = scanner.nextFloat();
+        card.constructor();
         if (number < 9999 && number > 0000){
             break;
         }
@@ -35,5 +37,12 @@ public class Count {
 
     public void consult_balance(){
         System.out.printf("Saldo Atual: %.2f\n", balance);
+    }
+
+    public boolean verify(String pass){
+        if (card.verify(pass)){
+            return true;
+        }
+        else return false;
     }
 }

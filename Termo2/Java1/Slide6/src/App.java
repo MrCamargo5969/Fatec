@@ -11,7 +11,7 @@ public class App {
         }
         while (true){
             System.out.println();
-            System.out.printf("CONTA CORRENTE\n1 - Depósito\n2 - Retirada\n3 - Consulta Saldo\n4 - Sair\nOpção: ");
+            System.out.printf("CONTA CORRENTE\n1 - Depósito\n2 - Retirada\n3 - Consulta Saldo\n4 - Alterar senha\n5 - Sair\nOpção: ");
             Scanner scanner = new Scanner(System.in);
             int option = scanner.nextInt();
             if (option <= 4 && option >=1){
@@ -30,6 +30,9 @@ public class App {
                         client.consult_balance();
                         break;
                     case 4:
+                        client.new_password();
+                        break;
+                    case 5:
                         System.out.print("Saindo...\n");
                         System.exit(0);
                 }

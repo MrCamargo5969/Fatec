@@ -27,5 +27,20 @@ public class Card {
             System.out.printf("Senha Invalida\n");
             return false;
         }
+    
+    }
+    public void new_password(){
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.printf("Digite a senha atual:\n");
+            String match3 = scanner.nextLine();
+            if (match3.equals(password)){
+                constructor();
+                break;
+            }
+            else {
+                System.out.printf("Senha não confere.\n");
+            }
+        }
     }
 }

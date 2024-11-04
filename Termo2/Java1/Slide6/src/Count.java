@@ -45,4 +45,8 @@ public class Count {
         }
         else return false;
     }
+
+    public void new_password(){
+        card.new_password();
+    }
 }

@@ -13,6 +13,9 @@ def main():
     print("Matriz inicial:")
     print(G, end="\n\n")
 
+    G.mostrar_lista_adjacencia()
+    print()
+
     n = int(input("Digite o vértice(n-1) para verificar vizinhos e grau: "))
     print(f"Vizinhos do vértice {n+1}:", G.neighbors(n))
     if G.get_directed():
@@ -23,10 +26,11 @@ def main():
 
     v1 = int(input("Digite o primeiro vértice da aresta a ser verificada: "))
     v2 = int(input("Digite o segundo vértice da aresta a ser verificada: "))
-    if G.has_edge(v1, v2):
-        print(f"A aresta entre {v1} e {v2} existe.")
+    if G.has_edge(v1-1, v2-1):
+        print(f"A aresta entre {v1} e {v2} existe.\n")
     else:
-        print(f"A aresta entre {v1} e {v2} não existe.")
+        print(f"A aresta entre {v1} e {v2} não existe.\n")
+
 
 if __name__ == "__main__":
     main()

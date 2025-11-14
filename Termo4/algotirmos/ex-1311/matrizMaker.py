@@ -42,5 +42,21 @@ class matrizMaker:
             return self.degree(u)
         return sum(1 for v in range(self.n) if self.matriz[v][u] != self.default_value)
 
+    def gerar_lista_adjacencia(self):
+        lista = {}
+
+        for u in range(self.n):
+            lista[u] = []
+            for v in range(self.n):
+                if self.matriz[u][v] != self.default_value:
+                    lista[u].append(v)
+
+        return lista
+
+    def mostrar_lista_adjacencia(self):
+        lista = self.gerar_lista_adjacencia()
+        for u in lista:
+            print(f"{u+1}: {lista[u]}")
+
     def __str__(self):
         return "\n".join(" ".join(str(x) for x in row) for row in self.matriz)
